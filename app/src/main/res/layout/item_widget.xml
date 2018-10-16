@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/appwidget_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:paddingTop="5dp"
+        android:drawableStart="@drawable/ic_clock_alarm"
+        android:drawablePadding="5dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text=""
+        android:textColor="@color/selector_widget_text"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/appwidget_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:paddingBottom="5dp"
+        android:text=""
+        android:textColor="@color/colorSolid"
+        android:textSize="10sp"/>
+</LinearLayout>

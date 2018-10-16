@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3f51b5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#303F9F</color>
+
+    <color name="transparent">@android:color/transparent</color>
+    <color name="colorBlack">@android:color/black</color>
+    <color name="colorWhite">@android:color/white</color>
+
+    <color name="colorBackground">#F5F5F5</color>
+    <color name="colorNoteText">#434343</color>
+    <color name="colorItemHead">#EBEBEB</color>
+
+    <color name="colorDeepDark">#333333</color>
+    <color name="colorGray">#767574</color>
+    <color name="colorDeepGray">#8B8B8B</color>
+
+    <color name="colorSolid">#AAAAAA</color>
+    <color name="colorStroke">#D5D5D5</color>
+    <color name="colorLine">#FFF0F0F0</color>
+
+    <color name="colorDarkRed">#702216</color>
+    <color name="colorRed">#e34f46</color>
+    <color name="colorPink">#FF4081</color>
+
+    <color name="colorCyan">#448AFF</color>
+    <color name="colorGreen">#96D73C</color>
+    <color name="colorGolden">#FF9800</color>
+
+    <!-- Custom TakePhoto colors-->
+    <color name="multiple_image_select_primaryDark">@color/colorPrimaryDark</color>
+</resources>

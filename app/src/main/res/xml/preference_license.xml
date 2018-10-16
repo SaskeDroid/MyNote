@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Website">
+
+        <Preference
+            android:title="Android Developers"
+            android:summary="https://developer.android.google.cn"
+            android:key="https://developer.android.google.cn/"/>
+
+        <Preference
+            android:title="Kotlin 语言中文站"
+            android:summary="https://www.kotlincn.net"
+            android:key="https://www.kotlincn.net/"/>
+
+        <Preference
+            android:title="CSDN 博客"
+            android:summary="https://blog.csdn.net"
+            android:key="https://blog.csdn.net"/>
+
+        <Preference
+            android:title="W3CSchool"
+            android:summary="https://www.w3cschool.cn"
+            android:key="https://www.w3cschool.cn/"/>
+
+        <Preference
+            android:title="GitHub"
+            android:summary="https://github.com"
+            android:key="https://github.com/"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Library">
+
+        <Preference
+            android:title="ORMLite-Android"
+            android:summary="http://ormlite.com"
+            android:key="http://ormlite.com/"/>
+
+        <Preference
+            android:title="SwipeItemLayout"
+            android:summary="https://github.com/AItsuki/SwipeMenuRecyclerView"
+            android:key="https://github.com/AItsuki/SwipeMenuRecyclerView/"/>
+
+        <Preference
+            android:title="SwipeBackLayout"
+            android:summary="https://github.com/ikew0ng/SwipeBackLayout"
+            android:key="https://github.com/ikew0ng/SwipeBackLayout/"/>
+
+        <Preference
+            android:title="ChaosCompass"
+            android:summary="https://github.com/ChaosOctopus/ChaosCompass"
+            android:key="https://github.com/ChaosOctopus/ChaosCompass/"/>
+
+        <Preference
+            android:title="Banner"
+            android:summary="https://github.com/youth5201314/banner"
+            android:key="https://github.com/youth5201314/banner/"/>
+
+        <Preference
+            android:title="ExplosionField"
+            android:summary="https://github.com/tyrantgit/ExplosionField"
+            android:key="https://github.com/tyrantgit/ExplosionField/"/>
+
+        <Preference
+            android:title="HeartLayout"
+            android:summary="https://github.com/tyrantgit/HeartLayout"
+            android:key="https://github.com/tyrantgit/HeartLayout/"/>
+
+        <Preference
+            android:title="TakePhoto"
+            android:summary="https://github.com/crazycodeboy/TakePhoto"
+            android:key="https://github.com/crazycodeboy/TakePhoto/"/>
+
+        <Preference
+            android:title="RichEditText"
+            android:summary="https://github.com/KDF5000/RichEditText"
+            android:key="https://github.com/KDF5000/RichEditText/"/>
+    </PreferenceCategory>
+</PreferenceScreen>

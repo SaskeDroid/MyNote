@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/DrawerMenuButton"
+        android:drawableStart="@drawable/ic_menu_archive"
+        android:drawableEnd="@drawable/ic_arrow_right"
+        android:text="@string/label" />
+
+    <TextView
+        android:id="@+id/tvItem"
+        style="@style/DrawerMenuButton"
+        android:layout_height="@dimen/baseMenuHeight"
+        android:paddingStart="38dp"
+        android:paddingEnd="0dp"
+        android:drawablePadding="10dp"
+        android:drawableStart="@drawable/ic_menu_archive"
+        android:text="@string/label"/>
+</LinearLayout>
+<!-- 注：Button的存在会导致ExpandableListView一级目录点击失效，请用其它控件替代-->

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menuCamera"
+        android:title="@string/photo_or_gallery"
+        android:icon="@drawable/ic_menu_camera"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/menuRemind"
+        android:title="@string/remind"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/menuTags"
+        android:title="@string/label"
+        app:showAsAction="never"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/menuDetail"
+        android:title="@string/detail"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/menuDelete"
+        android:title="@string/delete"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/menuUndo"
+        android:title="@string/undo"
+        app:showAsAction="never"/>
+</menu>

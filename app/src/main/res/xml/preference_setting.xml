@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/application">
+
+        <Preference
+            android:key="@string/backup"
+            android:title="@string/backup"
+            android:summary="@string/backup_summary"
+            android:icon="@drawable/ic_menu_backup"/>
+
+        <Preference
+            android:key="@string/clear_cache"
+            android:title="@string/clear_cache"
+            android:summary="@string/clear_cache_summary"
+            android:icon="@drawable/ic_menu_delete"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/other">
+
+        <Preference
+            android:key="@string/about"
+            android:title="@string/about"
+            android:summary="@string/about_summary"
+            android:icon="@drawable/ic_menu_about"/>
+    </PreferenceCategory>
+</PreferenceScreen>

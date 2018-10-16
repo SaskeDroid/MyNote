@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title></title>
+    </head>
+
+    <body>
+        <p>WebView</p>
+        <p><button id="btn0">调用Native方法(无参)</button></p>
+        <p><button id="btn1">调用Native方法(有参)</button></p>
+
+        <div id="content"></div>
+    </body>
+
+    <script type="text/javascript">
+        var name = "from JavaScript";
+
+        // 网页内按钮点击事件
+        document.getElementById("btn0").onclick = function() {
+            native.setMessage(); // native是activity传过来的对象名，setMessage是activity中的方法
+        }
+
+        document.getElementById("btn1").onclick = function() {
+            native.setMessage(name);
+        }
+
+        // 显示结果的控件
+        var content = document.getElementById("content");
+
+        // 在activity中以参数 "javascript:message()" 形式调用
+        function message() {
+            content.innerHTML = "调用了JS函数"
+        };
+
+        function message2(name){
+            content.innerHTML = "调用了JS函数：" + name;
+        };
+    </script>
+</html>

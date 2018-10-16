@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="my.app.note">
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:name=".application.MyApp"
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:theme="@style/AppTheme">
+
+        <!-- Activity -->
+        <activity
+            android:name=".activity.HomeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"> <!-- 键盘会覆盖屏幕 -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.BaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.BaseDBActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.NoteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RecycleListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RecycleNoteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LogsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AboutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.BackupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LicenseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CompassActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeDarkStatus" />
+        <activity
+            android:name=".activity.DemoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.demo.HybridActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- Service -->
+        <service
+            android:name=".service.RemindService"
+            android:exported="false" />
+        <service
+            android:name=".widget.NoteRemoteViewService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+        <!-- Receiver -->
+        <receiver android:name=".service.RemindReceiver" />
+        <receiver android:name=".widget.NoteWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" /> <!-- Necessary -->
+                <action android:name="my.app.note.action.LIST_ITEM_CLICK" /> <!-- Necessary -->
+                <action android:name="my.app.note.action.LIST_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/note_widget_info" />
+        </receiver>
+    </application>
+
+</manifest>

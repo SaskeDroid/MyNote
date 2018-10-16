@@ -1,0 +1,99 @@
+<resources>
+    <string name="app_name">记事本</string>
+    <string name="title_note">记事本</string>
+    <string name="title_widget">工具箱</string>
+    <string name="title_setting">更多</string>
+
+    <string name="search">搜索</string>
+    <string name="recycle">回收站</string>
+    <string name="more">更多</string>
+    <string name="photo_or_gallery">拍照或相册</string>
+    <string name="photo">拍照</string>
+    <string name="gallery">相册</string>
+
+    <string name="request_permission_failed">申请权限失败</string>
+    <string name="request_permission_never_ask">您拒绝了权限申请且不再询问，请到系统设置应用管理手动开启</string>
+
+    <string name="no_notes">无记事</string>
+    <string name="all_notes">全部记事</string>
+    <string name="new_note">新建记事</string>
+    <string name="edit_note">编辑记事</string>
+    <string name="view_note">查看记事</string>
+
+    <string name="tips">提示</string>
+    <string name="whether_to_remove_this_note">确定要彻底删除这条记事？</string>
+    <string name="whether_to_delete_this_note">是否删除这条记事？</string>
+    <string name="revert">还原</string>
+    <string name="delete">删除</string>
+    <string name="note_has_been_deleted">记事已删除</string>
+    <string name="note_has_been_restored">记事已恢复</string>
+    <string name="undo">撤销</string>
+
+    <string name="remind">提醒</string>
+    <string name="remind_clear">清除</string>
+    <string name="remind_reset">重设</string>
+    <string name="remind_set_success">提醒时间 %1$s 设置成功</string>
+    <string name="remind_clear_success">提醒时间清除成功</string>
+    <string name="remind_set_tips">提醒时间必须大于当前时间</string>
+    <string name="remind_clear_tips">已设置提醒时间 %1$s</string>
+
+    <string name="label">标签</string>
+    <string name="set_label">设置标签</string>
+    <string name="new_label">新建标签</string>
+    <string name="whether_to_delete_this_label">是否删除该标签？</string>
+
+    <string name="detail">详情</string>
+    <string name="update_time_">更新时间：</string>
+    <string name="create_time_">创建时间：</string>
+    <string name="word_count_">字数统计：</string>
+
+    <string name="application">应用</string>
+    <string name="backup">备份</string>
+    <string name="backup_summary">导入/导出数据</string>
+    <string name="clear_cache">清除缓存</string>
+    <string name="clear_cache_summary">删除已缓存的数据 (%1$s)</string>
+    <string name="other">其它</string>
+    <string name="about">关于</string>
+    <string name="about_summary">版本、帮助和开源许可等</string>
+
+    <string name="export_data">数据备份</string>
+    <string name="import_data">数据还原</string>
+    <string name="backup_tips">备份数据保存在SD卡“my.app.note”目录下</string>
+    <string name="export_success">备份成功</string>
+    <string name="import_success">还原成功</string>
+    <string name="import_no_data">本地无备份</string>
+
+    <string name="update_log">更新日志</string>
+    <string name="created_on_">%1$s 创建</string>
+    <string name="updated_on_">%1$s 更新</string>
+
+    <string name="use_help">使用帮助</string>
+    <string name="help_tips">Do not need read the foolish manual.</string>
+    <string name="special_thanks">开源许可</string>
+    <string name="visit_website">访问网站</string>
+
+    <string name="compass">指南针</string>
+    <string name="demo">Demo</string>
+    <string name="web_test">Native + H5 test</string>
+    <string name="divider_line">分割线</string>
+
+    <string name="coming_soon">敬请期待</string>
+    <string name="package_name">my.app.note</string>
+    <string name="powered_by_android">Powered by Android</string>
+    <string name="copyright">Copyright © 2015-%1$s %2$s. All Rights Reserved.</string>
+
+    <string name="sunday">星期日</string>
+    <string name="monday">星期一</string>
+    <string name="tuesday">星期二</string>
+    <string name="wednesday">星期三</string>
+    <string name="thursday">星期四</string>
+    <string name="friday">星期五</string>
+    <string name="saturday">星期六</string>
+
+    <!-- Custom TakePhoto strings-->
+    <string name="album_view">选择相册</string>
+    <string name="image_view">选择照片</string>
+    <string name="add">确定</string>
+    <string name="selected">张已选</string>
+    <string name="limit_exceeded">最多只能选择 %d 张</string>
+</resources>

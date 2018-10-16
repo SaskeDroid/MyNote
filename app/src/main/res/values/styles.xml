@@ -1,0 +1,45 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- 状态栏透明-->
+    <style name="AppThemeNoStatus" parent="AppTheme">
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+    </style>
+
+    <!-- 状态栏黑色-->
+    <style name="AppThemeDarkStatus" parent="AppTheme">
+        <item name="colorPrimaryDark">@color/colorBlack</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="PopupOverlayNoAnchor" parent="AppTheme.PopupOverlay">
+        <item name="overlapAnchor">false</item>
+    </style>
+
+    <!-- 侧滑菜单Item项-->
+    <style name="DrawerMenuItem">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/listPreferredItemHeightSmall</item>
+        <item name="android:gravity">center_vertical|start</item>
+        <item name="android:paddingStart">?attr/listPreferredItemPaddingLeft</item>
+        <item name="android:paddingEnd">?attr/listPreferredItemPaddingRight</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textAppearance">?attr/textAppearanceListItem</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- 侧滑菜单Button项-->
+    <style name="DrawerMenuButton" parent="DrawerMenuItem">
+        <item name="android:drawablePadding">32dp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+</resources>
