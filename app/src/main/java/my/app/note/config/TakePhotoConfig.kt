@@ -34,9 +34,9 @@ object TakePhotoConfig {
 
         // 压缩配置
         val config = CompressConfig.Builder()
-                .setMaxSize(1024 * 100)
-                .setMaxPixel(1080)
-                .enableReserveRaw(true)
+                .setMaxSize(1024 * 100) // 单位：Bytes
+                .setMaxPixel(1080) // 单位：px
+                .enableReserveRaw(true) // 拍照是否保留原图
                 .create()
         takePhoto.onEnableCompress(config, false)
     }
@@ -53,7 +53,9 @@ object TakePhotoConfig {
     // 裁剪配置
     private fun getCropConfigs(): CropOptions {
         val cropBuilder = CropOptions.Builder()
-        cropBuilder.setWithOwnCrop(false) // 是否使用TakePhoto自带的裁剪工具
+                .setWithOwnCrop(false) // 是否使用TakePhoto自带的裁剪工具
+//                .setAspectX(9)
+//                .setAspectY(16)
         return cropBuilder.create()
     }
 }

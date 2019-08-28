@@ -7,13 +7,13 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
 import my.app.note.R
-import my.app.note.bean.DemoItem
+import my.app.note.bean.ContactItem
 
 /**
  * Created by CCP on 2018.4.12 0012.
  *
  */
-class DemoAdapter(var context: Context, var list: List<DemoItem>) : BaseAdapter() {
+class ContactAdapter(var context: Context, var list: List<ContactItem>) : BaseAdapter() {
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val holder: Holder

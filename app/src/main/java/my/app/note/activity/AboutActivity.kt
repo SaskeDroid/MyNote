@@ -21,8 +21,7 @@ class AboutActivity : BaseActivity() {
         setContentView(R.layout.activity_about)
         setToolbarTitle(R.string.about)
 
-        tvVersion.text = StringBuilder().append("V ${AndroidUtils.getVersionName(this)}")
-                .append(" (${AndroidUtils.getVersionCode(this)}.${BuildConfig.BUILD_TIME.replace("-", "").substring(2)}) ")
+        tvVersion.text = StringBuilder().append("v${AndroidUtils.getVersionName(this)}").append(" (${AndroidUtils.getVersionCode(this)}.${formatCode(BuildConfig.BUILD_TIME)}) ")
         tvCopyright.text = String.format(getString(R.string.copyright), Calendar.getInstance().get(Calendar.YEAR), BuildConfig.BUILD_HOST)
 
         // 爆炸效果
@@ -33,6 +32,8 @@ class AboutActivity : BaseActivity() {
             return@setOnLongClickListener true
         }
     }
+
+    private fun formatCode(str: String) = str.replace("-", "").substring(2)
 
     // 更新日志
     fun showUpdateLog(view: View) {

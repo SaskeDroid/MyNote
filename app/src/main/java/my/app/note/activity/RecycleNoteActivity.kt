@@ -22,7 +22,7 @@ class RecycleNoteActivity : BaseActivity() {
         setContentView(R.layout.activity_note)
         setToolbarTitle(R.string.view_note)
 
-        etContent.visibility = View.GONE
+        richEditor.visibility = View.GONE
         tvContent.visibility = View.VISIBLE
         tvContent.movementMethod = ScrollingMovementMethod.getInstance() // 可滚动
 

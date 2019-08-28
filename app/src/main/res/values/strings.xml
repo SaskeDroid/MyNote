@@ -72,10 +72,14 @@
     <string name="special_thanks">开源许可</string>
     <string name="visit_website">访问网站</string>
 
-    <string name="compass">指南针</string>
-    <string name="demo">Demo</string>
-    <string name="web_test">Native + H5 test</string>
+    <string name="widget_compass">指南针</string>
+    <string name="widget_web">Native + H5 test</string>
+    <string name="widget_contact">通讯录</string>
     <string name="divider_line">分割线</string>
+
+    <string name="web_layout">Layout</string>
+    <string name="web_js_no_param">调用JS函数(无参)</string>
+    <string name="web_js_have_param">调用JS函数(有参)</string>
 
     <string name="coming_soon">敬请期待</string>
     <string name="package_name">my.app.note</string>

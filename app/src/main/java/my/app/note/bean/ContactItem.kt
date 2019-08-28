@@ -7,6 +7,6 @@ import my.app.note.util.PinyinUtils
  *
  */
 
-class DemoItem(var name: String?) {
+class ContactItem(var name: String?) {
     val pinyin: String = PinyinUtils.getInstance().convertWords(name)
 }

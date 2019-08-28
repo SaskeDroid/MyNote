@@ -2,6 +2,7 @@ package my.app.note.util
 
 import android.content.Context
 import android.content.SharedPreferences
+import my.app.note.constant.Constants
 
 
 /**
@@ -10,10 +11,8 @@ import android.content.SharedPreferences
  */
 object SharedUtils {
 
-    private val SHARED_NAME: String = "SHARED_MY_APP_NOTE"
-    private val KEY_NOTES_TAGS: String = "KEY_NOTES_TAGS"
-    private val KEY_PASSWORD: String = "KEY_PASSWORD"
-    private val KEY_LIKE_COUNT: String = "KEY_LIKE_COUNT"
+    private val SHARED_NAME: String = Constants.SHARED_NAME
+    private val KEY_NOTES_TAGS: String = Constants.KEY_NOTES_TAGS
 
     private fun getSharedPreferences(context: Context): SharedPreferences = context.getSharedPreferences(SHARED_NAME, Context.MODE_PRIVATE)
 

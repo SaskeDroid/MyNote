@@ -20,7 +20,7 @@ class HybridActivity : BaseActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hybrid)
-        setToolbarTitle(R.string.web_test)
+        setToolbarTitle(R.string.widget_web)
         initWebView()
 
         btn1.setOnClickListener(this)

@@ -9,17 +9,12 @@ import my.app.note.database.NoteBean
 import my.app.note.util.DateUtils
 import my.app.note.util.DialogUtils
 import my.app.note.util.FileUtils
-import my.app.note.util.ToastUtils
 
 /**
  * Created by CCP on 2018.1.25 0025.
  *
  */
 open class BaseFragment: Fragment() {
-
-    fun showToast(msg: Int) = showToast(getString(msg))
-
-    fun showToast(msg: String) = ToastUtils.showToast(activity, msg)
 
     @JvmOverloads
     fun showNoteDetail(noteBean: NoteBean, newText: String = "") {

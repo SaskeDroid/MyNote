@@ -102,11 +102,13 @@ object FileUtils {
 
     // 在SD卡创建名为 "my_app_note.backup" 的备份文件
     private fun createBackupFile(context: Context): File {
-        val file = File(Environment.getExternalStorageDirectory(), "/${context.packageName}/" + "my_app_note.backup")
+        val files = File(Environment.getExternalStorageDirectory().absolutePath + "/${context.packageName}/")
+        if (!files.exists()) {
+            files.mkdirs()
+        }
+        val file = File(files, "note.bak")
         try {
-            if (!file.exists()) {
-                file.createNewFile()
-            }
+            file.createNewFile()
         } catch (e: Exception) {
             e.printStackTrace()
         }

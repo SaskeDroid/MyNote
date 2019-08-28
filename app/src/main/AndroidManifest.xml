@@ -62,7 +62,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeDarkStatus" />
         <activity
-            android:name=".activity.DemoActivity"
+            android:name=".activity.ContactActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.demo.HybridActivity"
@@ -82,8 +82,8 @@
         <receiver android:name=".service.RemindReceiver" />
         <receiver android:name=".widget.NoteWidgetProvider">
             <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" /> <!-- Necessary -->
-                <action android:name="my.app.note.action.LIST_ITEM_CLICK" /> <!-- Necessary -->
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" /> <!-- 必须 -->
+                <action android:name="my.app.note.action.LIST_ITEM_CLICK" /> <!-- 必须 -->
                 <action android:name="my.app.note.action.LIST_UPDATE" />
             </intent-filter>
 

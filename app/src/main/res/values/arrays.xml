@@ -12,11 +12,13 @@
 
     <string-array name="ary_widget_icons">
         <item>@drawable/ic_widget_compass</item>
-        <item>@drawable/ic_widget_demo</item>
+        <item>@drawable/ic_widget_web</item>
+        <item>@drawable/ic_widget_contact</item>
     </string-array>
 
     <string-array name="ary_widget_titles">
-        <item>@string/compass</item>
-        <item>@string/demo</item>
+        <item>@string/widget_compass</item>
+        <item>@string/widget_web</item>
+        <item>@string/widget_contact</item>
     </string-array>
 </resources>

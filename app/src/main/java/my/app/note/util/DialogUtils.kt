@@ -1,11 +1,13 @@
 package my.app.note.util
 
 import android.app.AlertDialog
+import android.app.DatePickerDialog
 import android.content.Context
 import android.content.DialogInterface
 import android.text.SpannableString
 import android.text.TextUtils
 import android.view.View
+import java.util.*
 
 /**
  * Created by CCP on 2017.11.7.
@@ -85,5 +87,10 @@ object DialogUtils {
         }
         builder.setItems(items, listener)
         return builder
+    }
+
+    fun getDatePickerDialog(context: Context, listener: DatePickerDialog.OnDateSetListener): DatePickerDialog {
+        val calendar = Calendar.getInstance()
+        return DatePickerDialog(context, 0, listener, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH))
     }
 }

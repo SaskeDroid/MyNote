@@ -83,7 +83,7 @@ class LogsActivity : BaseActivity() {
                 }
             }
             val saveData = gson.toJson(newList)
-            Log.i("CCP", "保存的数据-->" + saveData)
+            Log.i("CCP", "保存的数据-->$saveData")
             mACache?.put(Constants.KEY_LIKE_COUNT, saveData)
         }
     }

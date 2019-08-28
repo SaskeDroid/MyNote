@@ -37,7 +37,7 @@ class NoteWidgetProvider : AppWidgetProvider() {
     override fun onReceive(context: Context?, intent: Intent?) {
         super.onReceive(context, intent)
         val appWidgetManager = AppWidgetManager.getInstance(context)
-        val componentName = ComponentName(context, NoteWidgetProvider::class.java)
+        val componentName = ComponentName(context!!, NoteWidgetProvider::class.java)
         val appWidgetIds = appWidgetManager.getAppWidgetIds(componentName)
         when (intent!!.action) {
             Constants.ACTION_LIST_ITEM_CLICK -> {

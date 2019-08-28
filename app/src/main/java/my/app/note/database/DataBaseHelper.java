@@ -19,7 +19,7 @@ public class DataBaseHelper extends OrmLiteSqliteOpenHelper {
 
     private static final String TAG = "DataBaseHelper";
     private static final String DB_NAME = "my_app_note.db";
-    private static final int DB_VERSION = 3; // 每次升级数据库版本号要+1
+    private static final int DB_VERSION = 3; // 每次升级数据库版本号+1
 
     private DataBaseHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
@@ -98,12 +98,12 @@ public class DataBaseHelper extends OrmLiteSqliteOpenHelper {
 
     /* ----以下数据库升级记录----*/
 
-    // Version2:在表"table_note"中插入一列"NOTE_REMIND_TIME"用于记录提醒时间
+    // Ver2:在表"table_note"中插入一列"NOTE_REMIND_TIME"用于记录提醒时间
     private void upgradeToVersion2() throws SQLException {
         getDao(NoteBean.class).executeRaw("ALTER TABLE `table_note` ADD COLUMN NOTE_REMIND_TIME VARCHAR ;");
     }
 
-    // Version3:在表"table_note"中插入一列"NOTE_TAGS"用于记录笔记标签
+    // Ver3:在表"table_note"中插入一列"NOTE_TAGS"用于记录笔记标签
     private void upgradeToVersion3() throws SQLException {
         getDao(NoteBean.class).executeRaw("ALTER TABLE `table_note` ADD COLUMN NOTE_TAGS VARCHAR ;");
     }

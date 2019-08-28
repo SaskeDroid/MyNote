@@ -27,16 +27,22 @@ object AndroidUtils {
 
     fun getVersionName(context: Context): String {
         val packageInfo: PackageInfo? = getPackageInfo(context)
-        if (packageInfo != null)
+        if (packageInfo != null) {
             return packageInfo.versionName
+        }
         return "N/A"
     }
 
     fun getVersionCode(context: Context): Int {
         val packageInfo: PackageInfo? = getPackageInfo(context)
-        if (packageInfo != null)
+        if (packageInfo != null) {
             return packageInfo.versionCode
+        }
         return -1
+    }
+
+    fun getPackageName(context: Context): String {
+        return context.packageName
     }
 
     // 打开应用信息

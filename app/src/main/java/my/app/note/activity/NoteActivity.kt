@@ -23,17 +23,19 @@ import com.jph.takephoto.model.TResult
 import com.jph.takephoto.permission.InvokeListener
 import com.jph.takephoto.permission.PermissionManager
 import com.jph.takephoto.permission.TakePhotoInvocationHandler
+import jp.wasabeef.richeditor.RichEditor
 import my.app.note.config.TakePhotoConfig
 
 /**
  * Created by CCP on 2017.11.6.
  *
  */
-class NoteActivity : BaseDBActivity(), View.OnTouchListener, TakePhoto.TakeResultListener, InvokeListener {
+class NoteActivity : BaseDBActivity(), TakePhoto.TakeResultListener, InvokeListener, RichEditor.OnTextChangeListener {
 
     private var noteId: Int = -1
     private var noteBean: NoteBean? = null
     private var oldText: String? = ""
+    private var newText: String? = ""
     private var mYear: Int = 0
     private var mMonth: Int = 0
     private var mDay: Int = 0
@@ -51,6 +53,8 @@ class NoteActivity : BaseDBActivity(), View.OnTouchListener, TakePhoto.TakeResul
         noteId = intent.getIntExtra(Constants.INTENT_NOTE_ID, -1)
         noteBean = noteDBManager!!.select(noteId)
         if (noteId == -1) create() else edit()
+
+        richEditor.setOnTextChangeListener(this)
     }
 
     override fun onSaveInstanceState(outState: Bundle?) {
@@ -71,9 +75,7 @@ class NoteActivity : BaseDBActivity(), View.OnTouchListener, TakePhoto.TakeResul
         setToolbarTitle(R.string.edit_note)
         window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN)
         oldText = noteBean!!.noteContent
-        etContent.isCursorVisible = false
-        etContent.setOnTouchListener(this)
-        etContent.richText = oldText
+        richEditor.html = oldText
         tvDate.text = String.format(getString(R.string.updated_on_), DateUtils.getDateString(noteBean!!.noteUpdateTime, Constants.FORMAT_YMDHM))
     }
 
@@ -102,7 +104,6 @@ class NoteActivity : BaseDBActivity(), View.OnTouchListener, TakePhoto.TakeResul
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item?.itemId) {
             android.R.id.home -> {
-                KeyboardUtils.closeKeyboard(this, etContent)
                 save()
             }
             R.id.menuCamera -> {
@@ -142,7 +143,7 @@ class NoteActivity : BaseDBActivity(), View.OnTouchListener, TakePhoto.TakeResul
                 }).show()
             }
             R.id.menuDetail -> {
-                val content = etContent.text.toString().trim()
+                val content = newText!!.trim()
                 if (noteId == -1) {
                     showNoteDetail(createTimestamp, createTimestamp, content)
                 } else {
@@ -161,24 +162,15 @@ class NoteActivity : BaseDBActivity(), View.OnTouchListener, TakePhoto.TakeResul
                 }
             }
             R.id.menuUndo -> {
-                etContent.setText(oldText)
-                etContent.setSelection(etContent.text.length)
+                richEditor.html = oldText
             }
         }
         return super.onOptionsItemSelected(item)
     }
 
-    override fun onTouch(v: View?, event: MotionEvent?): Boolean {
-        when (event!!.action) {
-            MotionEvent.ACTION_DOWN -> {
-                etContent.isCursorVisible = true
-                etContent.setSelection(etContent.text.length)
-            }
-            MotionEvent.ACTION_UP -> {
-                v!!.performClick()
-            }
-        }
-        return false
+    // 富文本编辑器监听
+    override fun onTextChange(text: String?) {
+        newText = text
     }
 
     override fun onBackPressed() {
@@ -188,7 +180,6 @@ class NoteActivity : BaseDBActivity(), View.OnTouchListener, TakePhoto.TakeResul
 
     // 保存笔记与否
     private fun save() {
-        val newText = etContent.text.toString().trim()
         if (!TextUtils.isEmpty(newText)) {
             if (noteId >= 0) {
                 // 编辑
@@ -229,11 +220,11 @@ class NoteActivity : BaseDBActivity(), View.OnTouchListener, TakePhoto.TakeResul
 
     override fun takeSuccess(result: TResult?) {
         val path = result?.image?.originalPath
-        Log.i("CCP", "Take photo success: " + path)
-        val bmp = BitmapFactory.decodeFile(path)
-        if (bmp != null) {
-            etContent.addImage(bmp, path)
-        }
+        Log.i("CCP", "Take photo success: $path")
+//        val bmp = BitmapFactory.decodeFile(path)
+//        if (bmp != null) {
+            richEditor.insertImage(path, path)
+//        }
     }
 
     override fun takeCancel() {

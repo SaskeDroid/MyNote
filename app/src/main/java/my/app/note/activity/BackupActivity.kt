@@ -68,7 +68,7 @@ class BackupActivity : BaseDBActivity(), View.OnClickListener {
     private fun import() {
         val list = FileUtils.getFileFromStorage(this)
         val sb = StringBuilder()
-        if (list.size > 0 && !list.isEmpty()) {
+        if (list.size > 0 && list.isNotEmpty()) {
             for (bean in list) {
                 sb.append("ID-->${bean.noteId}").append("\n")
                 sb.append("CREATE_TIME-->${bean.noteCreateTime}").append("\n")

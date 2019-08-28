@@ -71,16 +71,15 @@ public class SideBar extends View {
         super.onDraw(canvas);
 
         // 获取SideBar宽高
-        int width = getWidth();
-        int height = getHeight();
+        float width = getWidth();
+        float height = getHeight();
 
         // 设置每行字母高度
-        int eachHeight = height / ALPHABET.length;
+        float eachHeight = height / ALPHABET.length;
 
         for (int i = 0; i < ALPHABET.length; i++) {
-            // 计算每个字母y坐标
+            // 计算每个字母x、y坐标
             float xPos = width / 2 - paint.measureText(ALPHABET[i]) / 2;
-            // 计算每个字母y坐标
             float yPos = eachHeight * i + eachHeight;
 
             paint.setColor(DEFAULT_TEXT_COLOR);
@@ -104,37 +103,33 @@ public class SideBar extends View {
         float yPos = event.getY();
         int oldChoose = currChoose;
 
-        // 点击y坐标所占总高度的比例*数组长度等于点击字母表中的个数
+        // 点击y坐标所占总高度的比例*数组长度=点击字母表中的个数
         int cc = (int) (yPos / getHeight() * ALPHABET.length);
 
-        switch (action) {
-            case MotionEvent.ACTION_UP:
-                setBackgroundColor(DEFAULT_BACKGROUND);
-                currChoose = -1;
-                invalidate();
-                if (mTextDialog != null) {
-                    mTextDialog.setVisibility(View.INVISIBLE);
-                }
-                break;
-
-            default:
-                setBackgroundColor(CHOOSE_BACKGROUND);
-                if (oldChoose != cc) {
-                    if (cc >= 0 && cc < ALPHABET.length) {
-                        if (listener != null) {
-                            listener.onTouchingLetterChanged(ALPHABET[cc]);
-                        }
-                        if (mTextDialog != null) {
-                            mTextDialog.setText(ALPHABET[cc]);
-                            mTextDialog.setVisibility(View.VISIBLE);
-                        }
-                        currChoose = cc;
-                        invalidate();
+        if (action == MotionEvent.ACTION_UP) {
+            setBackgroundColor(DEFAULT_BACKGROUND);
+            currChoose = -1;
+            invalidate();
+            if (mTextDialog != null) {
+                mTextDialog.setVisibility(View.INVISIBLE);
+            }
+        } else {
+            setBackgroundColor(CHOOSE_BACKGROUND);
+            if (oldChoose != cc) {
+                if (cc >= 0 && cc < ALPHABET.length) {
+                    if (listener != null) {
+                        listener.onTouchingLetterChanged(ALPHABET[cc]);
                     }
+                    if (mTextDialog != null) {
+                        mTextDialog.setText(ALPHABET[cc]);
+                        mTextDialog.setVisibility(View.VISIBLE);
+                    }
+                    currChoose = cc;
+                    invalidate();
                 }
-                break;
+            }
         }
-        return true; // return true
+        return true;
     }
 
     // 绑定中间显示字母的TextView控件

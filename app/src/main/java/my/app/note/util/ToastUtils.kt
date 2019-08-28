@@ -33,7 +33,7 @@ object ToastUtils {
             firstTime = System.currentTimeMillis()
         } else {
             secondTime = System.currentTimeMillis()
-            if (msg == lastMsg) { // Kotlin字符串内容比较可以用“ == ”
+            if (msg == lastMsg) { // Kotlin字符串内容比较可以用“==”
                 if (secondTime - firstTime > len) {
                     mToast!!.show()
                 }

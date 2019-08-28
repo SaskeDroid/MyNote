@@ -13,7 +13,8 @@ import com.youth.banner.loader.ImageLoader
 import kotlinx.android.synthetic.main.fragment_widget.*
 import my.app.note.R
 import my.app.note.activity.CompassActivity
-import my.app.note.activity.DemoActivity
+import my.app.note.activity.ContactActivity
+import my.app.note.activity.demo.HybridActivity
 import my.app.note.adapter.GridViewAdapter
 import my.app.note.bean.GridItem
 import my.app.note.util.AndroidUtils
@@ -83,11 +84,14 @@ class WidgetFragment : BaseFragment(), AdapterView.OnItemClickListener {
 
     override fun onItemClick(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
         when (list[position].text) {
-            getString(R.string.compass) -> {
+            getString(R.string.widget_compass) -> {
                 startActivity(Intent(activity, CompassActivity::class.java))
             }
-            getString(R.string.demo) -> {
-                startActivity(Intent(activity, DemoActivity::class.java))
+            getString(R.string.widget_web) -> {
+                startActivity(Intent(activity, HybridActivity::class.java))
+            }
+            getString(R.string.widget_contact) -> {
+                startActivity(Intent(activity, ContactActivity::class.java))
             }
         }
     }

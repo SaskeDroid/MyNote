@@ -2,7 +2,6 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <PreferenceCategory android:title="Website">
-
         <Preference
             android:title="Android Developers"
             android:summary="https://developer.android.google.cn"
@@ -16,7 +15,7 @@
         <Preference
             android:title="CSDN 博客"
             android:summary="https://blog.csdn.net"
-            android:key="https://blog.csdn.net"/>
+            android:key="https://blog.csdn.net/"/>
 
         <Preference
             android:title="W3CSchool"
@@ -30,7 +29,6 @@
     </PreferenceCategory>
 
     <PreferenceCategory android:title="Library">
-
         <Preference
             android:title="ORMLite-Android"
             android:summary="http://ormlite.com"
@@ -72,8 +70,8 @@
             android:key="https://github.com/crazycodeboy/TakePhoto/"/>
 
         <Preference
-            android:title="RichEditText"
-            android:summary="https://github.com/KDF5000/RichEditText"
-            android:key="https://github.com/KDF5000/RichEditText/"/>
+            android:title="richeditor-android"
+            android:summary="https://github.com/wasabeef/richeditor-android"
+            android:key="https://github.com/wasabeef/richeditor-android/"/>
     </PreferenceCategory>
 </PreferenceScreen>

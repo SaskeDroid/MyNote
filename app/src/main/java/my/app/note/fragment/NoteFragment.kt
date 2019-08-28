@@ -91,7 +91,7 @@ class NoteFragment : BaseDBFragment(), RecyclerAdapter.RecyclerViewCallback, Sea
         }
     }
 
-    // 跳转到笔记页面，参数-1表新建，>0表编辑
+    // 跳转到笔记页面，id：-1新建，>0编辑
     private fun goToNoteActivity(id: Int) {
         Log.i("CCP", "笔记ID-->$id")
         val intent = Intent(activity, NoteActivity::class.java)
@@ -123,11 +123,6 @@ class NoteFragment : BaseDBFragment(), RecyclerAdapter.RecyclerViewCallback, Sea
     private fun search(keywords: String): MutableList<NoteBean> {
         val oldList = noteDBManager!!.selectNoteList()
         val newList: MutableList<NoteBean> = ArrayList()
-//        for (note in oldList) {
-//            if (note.noteContent.contains(keywords, true)) {
-//                newList.add(note)
-//            }
-//        } ↓↓↓
         oldList.filterTo(newList) { it.noteContent.contains(keywords, true) }
         return newList
     }

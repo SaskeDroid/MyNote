@@ -1,0 +1,93 @@
+<demo>
+    <item id="cpp">
+        <name>C++</name>
+    </item>
+    <item id="java">
+        <name>Java</name>
+    </item>
+    <item id="javascript">
+        <name>JavaScript</name>
+    </item>
+    <item id="kotlin">
+        <name>Kotlin</name>
+    </item>
+
+    <item id="css">
+        <name>CSS</name>
+    </item>
+    <item id="html">
+        <name>HTML</name>
+    </item>
+    <item id="json">
+        <name>JSON</name>
+    </item>
+    <item id="markdown">
+        <name>Markdown</name>
+    </item>
+    <item id="xml">
+        <name>XML</name>
+    </item>
+
+    <item id="android">
+        <name>Android</name>
+    </item>
+    <item id="miniprogram">
+        <name>Miniprogram</name>
+    </item>
+    <item id="node">
+        <name>Node.js</name>
+    </item>
+
+    <item id="vue">
+        <name>HTML5+</name>
+    </item>
+    <item id="react_native">
+        <name>React Native</name>
+    </item>
+    <item id="vue">
+        <name>Vue</name>
+    </item>
+
+    <item id="bootstrap">
+        <name>Bootstrap3</name>
+    </item>
+    <item id="element">
+        <name>Element</name>
+    </item>
+    <item id="mui">
+        <name>MUI</name>
+    </item>
+
+    <item id="mongodb">
+        <name>MongoDB</name>
+    </item>
+    <item id="sqlite">
+        <name>SQLite</name>
+    </item>
+
+    <item id="android_studio">
+        <name>Android Studio</name>
+    </item>
+    <item id="eclipse">
+        <name>Eclipse</name>
+    </item>
+    <item id="hbuilder">
+        <name>HBuilder</name>
+    </item>
+    <item id="hbuilderx">
+        <name>HBuilderX</name>
+    </item>
+    <item id="vscode">
+        <name>VS Code</name>
+    </item>
+    <item id="visual_studio">
+        <name>Visual Studio 2010</name>
+    </item>
+
+    <item id="git">
+        <name>Git</name>
+    </item>
+    <item id="svn">
+        <name>SVN</name>
+    </item>
+</demo>

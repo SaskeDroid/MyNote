@@ -17,19 +17,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/fab_elevation"
-            android:text="Layout"/>
+            android:text="@string/web_layout"/>
 
         <Button
             android:id="@+id/btn1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="调用JS函数(无参)"/>
+            android:text="@string/web_js_no_param"/>
 
         <Button
             android:id="@+id/btn2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="调用JS函数(有参)"/>
+            android:text="@string/web_js_have_param"/>
 
         <TextView
             android:id="@+id/content"
